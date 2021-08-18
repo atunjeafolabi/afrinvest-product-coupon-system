@@ -60,7 +60,7 @@ class RuleSeeder extends Seeder
             'name' => 'MINIMUM_PRICE_RULE',
             'coupon_id' => 4,
             'rule_type' => 'App\Models\MinimumPriceRule',
-            'rule_id'   => 3
+            'rule_id'   => 4
         ]);
 
         DB::table('rules')->insert([
