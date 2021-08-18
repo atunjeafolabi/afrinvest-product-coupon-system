@@ -58,6 +58,7 @@ Running Tests
 -------------
 - Ensure that `database.sqlite` file is present in the database folder of the root project
 - Run `php artisan test`
+- To generate test coverage reports, run `php artisan test --coverage-html tests/Coverage`. Html files are generated in the `tests/Coverage` folder, which can be viewed in a browser by opening `index.html`
 
 Future Work
 -----------

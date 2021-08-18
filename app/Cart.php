@@ -11,10 +11,14 @@ class Cart
     private $hasCouponApplied = false;
     private $discountAmount;
     private $couponCodeApplied;
+    /**
+     * @var Coupon
+     */
+    private $coupon;
 
-    public function __construct() {
+    public function __construct(Coupon $coupon) {
         $this->items = array();
-        $this->ids = array();
+        $this->coupon = $coupon;
     }
 
     public function isEmpty() : bool
@@ -93,7 +97,7 @@ class Cart
             throw new \Exception("A Coupon has already been applied to this cart");
         }
 
-        $coupon = Coupon::where('code', $code)->first();
+        $coupon = $this->coupon->where('code', $code)->first();
 
         if(!$coupon) {
             throw new ModelNotFoundException("Coupon with the supplied code does not exist");
