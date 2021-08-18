@@ -72,7 +72,7 @@ Tech Stack
 
 Recommendations
 ---------------
-- Generally, I think including one or two examples and hints would have helped.
+- Generally, I think including one or two examples and hints in the challenge would have assisted in reasoning about the task.
 
 
 Issues
