@@ -13,6 +13,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+           CouponSeeder::class,
+           FixedValueCouponSeeder::class,
+           MinimumItemRuleSeeder::class,
+           MinimumPriceRuleSeeder::class,
+           MixedCouponSeeder::class,
+           PercentOffCouponSeeder::class,
+           RejectedCouponSeeder::class,
+           RuleSeeder::class
+        ]);
     }
 }
